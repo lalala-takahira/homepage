@@ -1,0 +1,111 @@
+/* events.css */
+
+/* イベントセクションのスタイル */
+#events {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+#events h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
+/* イベント情報のスタイル */
+.event {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.event-photo-container {
+    width: 40%;
+    max-height: 200px; /* 写真の高さを固定 */
+    overflow: hidden;
+}
+
+.event-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.event-details {
+    padding: 1rem;
+    flex: 1;
+    max-height: 300px; /* 詳細部分の高さを固定 */
+    overflow-y: auto; /* テキストが長い場合にスクロール可能にする */
+    box-sizing: border-box; /* パディングを含むサイズ計算 */
+}
+
+.event-details h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-top: 0;
+}
+
+.event-details p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.5;
+    word-wrap: break-word; /* テキストが長くても折り返す */
+}
+
+.event-details .btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.event-details .btn-primary:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .event {
+        flex-direction: column;
+    }
+
+    .event-photo-container {
+        width: 100%;
+        max-height: 200px; /* 写真の高さを固定 */
+    }
+
+    .event-photo {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto; /* center the image horizontally */
+    }
+
+    .event-details {
+        padding: 1rem;
+        text-align: center;
+        max-height: 300px; /* 詳細部分の高さを固定 */
+    }
+
+    .event-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .event-details p {
+        font-size: 1rem;
+    }
+}
+

@@ -1,0 +1,127 @@
+/* aboutセクション */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.about-section h3 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.about-section, .news-section, .testimonials-section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.about-section h3, .news-section h3, .testimonials-section h3 {
+    margin-top: 0;
+}
+
+/* SDGsセクションのスタイル */
+.sdgs {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.sdgs-img {
+    flex: 0 0 50px;
+    margin-right: 1rem;
+}
+
+.sdgs p {
+    flex: 1;
+    text-align: left;
+}
+
+/* お世話になっている団体セクションのスタイル */
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.partner {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: left;
+}
+
+.partner h4 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.partner p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.partner a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.partner a:hover {
+    text-decoration: underline;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .sdgs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sdgs-img {
+        margin: 0 0 1rem 0;
+    }
+
+    .about-section p, .news-section p, .testimonials-section p, .partner p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .about-section h3, .news-section h3, .testimonials-section h3, .partner h4 {
+        font-size: 1.5rem;
+    }
+}

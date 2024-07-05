@@ -1,0 +1,77 @@
+/* media.css */
+
+#media {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+#media h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
+.media-section {
+    margin-bottom: 2rem;
+}
+
+.media-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.photos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.photos img {
+    max-width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.media-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .photos img {
+        max-width: 100%;
+    }
+
+    .video-container {
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+    }
+}

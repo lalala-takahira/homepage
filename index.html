@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ラララたかひら</title>
+    <meta name="description" content="ラララたかひらは、兵庫県三田市高平地区の魅力を発信する学生団体です。地域の自然、文化、イベント情報をお届けします。">
+    <meta property="og:title" content="ラララたかひら - 地域の魅力を発信する学生団体">
+    <meta property="og:description" content="ラララたかひらは、兵庫県三田市高平地区の魅力を発信する学生団体です。">
+    <meta property="og:image" content="https://lalala-takahira.github.io/homepage/img/takahira_logo.jpg">
+    <meta property="og:url" content="https://lalala-takahira.github.io/homepage/">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <section id="home">
+        
+        
+        <div class="top">
+            <img src="img/top.jpg" alt="our img" style="width: 100%; height: auto;">
+        </div>
+        
+        
+        
+        <!-- 団体紹介セクション -->
+        <div class="about-section">
+            <h2>私たちの団体について</h2>
+            <p>ラララたかひらは、地域社会に貢献することを目的とした学生ボランティア団体です。私たちは様々なイベントや活動を通じて、地域の皆さんと交流し、支え合っています。</p>
+            <a href="about.html" class="btn btn-primary stylish-button">詳細を見る</a>
+        </div>
+
+        
+
+
+        <!-- 最新ニュースセクション -->
+    <div class="news-section">
+        <h3>最新ニュース</h3>
+        <div class="newsSlides fade">
+            <a href="media.html" class="news-link">
+                <div class="news-caption">サンテレビさんに取材していただきました</div>
+                <img src="img/news1.JPG" style="width:100%">
+            </a>
+        </div>
+        <div class="newsSlides fade">
+            <a href="events.html#event1" class="news-link">
+                <div class="news-caption">イベント開催します！</div>
+                <img src="img/news3.png" style="width:100%">
+            </a>
+        </div>
+        <div class="newsSlides fade">
+            <a href="reports.html#report1" class="news-link">
+                <div class="news-caption">ラララカードができました！</div>
+                <img src="img/news2.jpg" style="width:100%">
+            </a>
+        </div>        
+            
+    </div>
+
+    <!-- 代表の挨拶セクション -->
+    <div class="greeting-section">
+        <div class="greeting-content">
+            <img src="img/member1.jpg" alt="代表の写真" class="greeting-photo">
+            <div class="greeting-text">
+                <h3>代表の挨拶</h3>
+                <p>こんにちは関西学院大学工学部の藤越颯人です。ラララたかひらという学生団体で高平地域でイベント開催したり、SNSで魅力発信を行っています。</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#header-placeholder").load("header.html", function() {
+                $('#menu-button').click(function() {
+                    $('#nav-menu').slideToggle();
+                });
+            });
+            
+            $("#footer-placeholder").load("footer.html");
+
+    
+            // ニューススライドショーのスクリプト
+            let newsSlideIndex = 1;
+            let newsSlideInterval;
+            showNewsSlides(newsSlideIndex);
+    
+            window.plusNewsSlides = function(n) {
+                clearInterval(newsSlideInterval);
+                showNewsSlides(newsSlideIndex += n);
+            };
+    
+            function showNewsSlides(n) {
+                let slides = document.getElementsByClassName("newsSlides");
+                if (n > slides.length) {newsSlideIndex = 1}
+                if (n < 1) {newsSlideIndex = slides.length}
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[newsSlideIndex-1].style.display = "block";
+                newsSlideInterval = setInterval(function() {
+                    plusNewsSlides(1);
+                }, 3000);
+            }
+        });
+    </script>
+    
+</body>
+</html>

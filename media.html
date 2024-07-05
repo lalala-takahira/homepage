@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ラララたかひら - メディア掲載</title>
+    <meta name="description" content="ラララたかひらは、兵庫県三田市高平地区の魅力を発信する学生団体です。地域の自然、文化、イベント情報をお届けします。">
+    <meta property="og:title" content="ラララたかひら - 地域の魅力を発信する学生団体">
+    <meta property="og:description" content="ラララたかひらは、兵庫県三田市高平地区の魅力を発信する学生団体です。">
+    <meta property="og:image" content="https://lalala-takahira.github.io/homepage/img/takahira_logo.jpg">
+    <meta property="og:url" content="https://lalala-takahira.github.io/homepage/">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <section id="media">
+        <h1>メディア掲載</h1>
+        
+        <section class="media-section">
+            <h2>取材動画</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Jo-dTgLbacE?si=CCwyIQaqWwGpvWHw?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="media-section">
+            <h2>活動写真</h2>
+            <div class="photos">
+                <img src="img/media1.JPG" alt="活動写真1">
+                <img src="img/media2.JPG" alt="活動写真2">
+                <img src="img/news1.JPG" alt="活動写真3">
+                <img src="img/report5.JPG" alt="活動写真4">
+                <img src="img/media5.jpg" alt="活動写真4">
+                <img src="img/media6.jpg" alt="活動写真4">
+            </div>
+        </section>
+
+        <section class="media-section">
+            <h2>取材内容</h2>
+            <p>サンテレビさんに、<a href="https://sanda-machihaku.jp/p2023-22/" target="_blank">さんだまち博</a>のイベントの様子を取材していただきました。<br>
+                <a href="https://seishonen.or.jp/honbu/front/6-2/%e5%85%88%e9%a7%86%e7%9a%84%e3%81%aa%e4%bd%93%e9%a8%93%e6%b4%bb%e5%8b%95/sdgshyogo/" target="_blank">SDGsHYOGO青年チャレンジ事業</a>の団体を代表して取材をうけ、どのようにSDGsを推進しているのかを伝えました.
+            </p>
+        </section>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#header-placeholder").load("header.html", function() {
+                $('#menu-button').click(function() {
+                    $('#nav-menu').slideToggle();
+                });
+            });
+
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
+</body>
+</html>
