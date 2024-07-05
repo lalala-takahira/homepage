@@ -97,7 +97,7 @@
     .event-details {
         padding: 1rem;
         text-align: center;
-        max-height: 300px; /* 詳細部分の高さを固定 */
+        max-height: none; /* 詳細部分の高さ制限を解除 */
     }
 
     .event-details h3 {
