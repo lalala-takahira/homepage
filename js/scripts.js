@@ -36,15 +36,11 @@ $(document).ready(function() {
     });
 
     const now = new Date();
-    const reservationsOpenAt = new Date('2026-09-01T10:00:00+09:00');
     const reservationsCloseAt = new Date('2026-10-11T00:00:00+09:00');
-    let statusText = '9/1 10:00 受付開始';
-    let ctaText = '申込ページを確認する';
+    let statusText = '参加者募集中';
+    let ctaText = '公式サイトから申し込む';
 
-    if (now >= reservationsOpenAt && now < reservationsCloseAt) {
-        statusText = '参加者募集中';
-        ctaText = '公式サイトから申し込む';
-    } else if (now >= reservationsCloseAt) {
+    if (now >= reservationsCloseAt) {
         statusText = '受付は終了しました';
         ctaText = 'イベント詳細を見る';
     }
