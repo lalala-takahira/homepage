@@ -1,127 +1,134 @@
-/* aboutセクション */
-.about-section {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
-    margin: 1rem 0;
+#about > h2 {
+    margin: 0 0 1.4rem;
+    color: var(--forest-deep);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 900;
 }
 
-.about-section h3 {
-    margin-top: 0;
-    font-size: 2rem;
+#about > img {
+    display: block;
+    width: 100% !important;
+    height: clamp(280px, 48vw, 520px) !important;
+    margin: 0 0 1.25rem;
+    object-fit: cover;
+    border-radius: 2rem;
+    box-shadow: var(--shadow);
 }
 
-.about-section p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin: 1rem 0;
+.about-us {
+    margin: 0 0 clamp(2rem, 5vw, 4.5rem);
+    padding: clamp(1.6rem, 4vw, 3.5rem);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 2rem;
+    box-shadow: 0 14px 34px rgba(31, 75, 58, 0.06);
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.about-us h2,
+.about-us h3 {
+    margin: 0 0 1rem;
+    color: var(--forest-deep);
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 900;
+    line-height: 1.3;
 }
 
-.btn-primary {
-    background-color: #4CAF50;
-    color: white;
+.about-us h4 {
+    margin: 1.6rem 0 0.8rem;
+    color: var(--forest);
+    font-size: 1.05rem;
 }
 
-.btn-primary:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+.about-us p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.96rem;
 }
 
-.about-section, .news-section, .testimonials-section {
-    margin: 2rem 0;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-}
-
-.about-section h3, .news-section h3, .testimonials-section h3 {
-    margin-top: 0;
-}
-
-/* SDGsセクションのスタイル */
-.sdgs {
+.vision-text ul {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 1.4rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.vision-text li {
+    padding: 0.55rem 1rem;
+    color: #fff;
+    background: var(--sweet-potato);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.sdgs {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 1.5rem;
     align-items: center;
-    margin: 1rem 0;
+    margin: 0 0 2rem;
+    padding: 1.2rem;
+    background: var(--cream);
+    border-radius: 1.3rem;
 }
 
 .sdgs-img {
-    flex: 0 0 50px;
-    margin-right: 1rem;
+    width: 100%;
 }
 
-.sdgs p {
-    flex: 1;
-    text-align: left;
+.sdgs-img img {
+    display: block;
+    width: 100%;
 }
 
-/* お世話になっている団体セクションのスタイル */
 .partners {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
 .partner {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    text-align: left;
+    padding: 1.4rem;
+    background: var(--cream);
+    border: 1px solid rgba(31, 75, 58, 0.08);
+    border-radius: 1.3rem;
 }
 
 .partner h4 {
-    margin-top: 0;
-    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+    color: var(--forest-deep);
+    font-size: 1rem;
 }
 
 .partner p {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-size: 0.84rem;
 }
 
 .partner a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
+    color: var(--forest);
+    font-weight: 800;
 }
 
-.partner a:hover {
-    text-decoration: underline;
-}
-
-/* レスポンシブデザイン */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .sdgs {
-        flex-direction: column;
-        align-items: flex-start;
+        grid-template-columns: 80px 1fr;
+        align-items: start;
+    }
+
+    .partners {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 460px) {
+    .sdgs {
+        grid-template-columns: 1fr;
     }
 
     .sdgs-img {
-        margin: 0 0 1rem 0;
-    }
-
-    .about-section p, .news-section p, .testimonials-section p, .partner p {
-        font-size: 1rem;
-        line-height: 1.4;
-    }
-
-    .about-section h3, .news-section h3, .testimonials-section h3, .partner h4 {
-        font-size: 1.5rem;
+        width: 80px;
     }
 }

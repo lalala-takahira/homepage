@@ -10,9 +10,12 @@
     <meta property="og:image" content="https://lalala-takahira.github.io/homepage/img/takahira_logo.jpg">
     <meta property="og:url" content="https://lalala-takahira.github.io/homepage/">
     <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/events.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=20260830">
+    <link rel="stylesheet" href="css/footer.css?v=20260830-3">
+    <link rel="stylesheet" href="css/events.css?v=20260830">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Google tag (gtag.js) -->
@@ -30,7 +33,20 @@
 
     <section id="events">
         <h2>イベント情報</h2>
-        <div id = "event15", class="event", style="margin-top: 30px;">
+        <div id="event2026" class="event event--featured">
+            <img src="https://sanda-machihaku.jp/wp-content/uploads/2026/08/さんだまち博写真2026-2.jpg" alt="薪窯で焼いているあつあつのピザ" class="event-photo">
+            <div class="event-details">
+                <span class="event-badge" data-event-status>9/1 10:00 受付開始</span>
+                <h3>あつあつピザとほりたて焼きいもパーティー！</h3>
+                <a href="https://sanda-machihaku.jp/p-2026-21/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-event-cta>申込ページを確認する</a>
+                <p>【開催日時】2026年10月24日（土）10:00～15:00<br>
+                    【会場】里野山家（三田市酒井349）<br>
+                    【参加費】大人2,500円／こども1,000円（3～12歳）<br>
+                    【定員】40人・12組／予約締切10月10日<br><br>
+                    芋掘り、焼きいも、本格的なピザ窯でのピザ焼き、手作りモルック、里山散策を楽しみます。親子や子ども連れの方はもちろん、大人の方のみでも参加できます。水筒、長靴（あれば）、軍手をお持ちいただき、汚れてもよい服装でお越しください。雨天中止・小雨決行です。</p>
+            </div>
+        </div>
+        <div id="event15" class="event">
             <img src="img/envents-10.png" alt="イベント写真" class="event-photo">
             <div class="event-details">
                 <h3>第10回「地球と遊ぼう」 ピザパーティー＆ひみつの大作戦</h3>
@@ -69,7 +85,7 @@
                 </p>
             </div>
         </div>
-        <div id = "event14", class="event", style="margin-top: 30px;">
+        <div id="event14" class="event">
             <img src="img/2024地球と遊ぼう (16).png" alt="イベント写真" class="event-photo">
             <div class="event-details">
                 <h3>第９回「地球と遊ぼう」 しいたけの菌打ち体験</h3>
@@ -108,7 +124,7 @@
             </div>
         </div>
 
-        <div id = "event13", class="event", style="margin-top: 30px;">
+        <div id="event13" class="event">
             <img src="img/2024地球と遊ぼう (15).png" alt="イベント写真" class="event-photo">
             <div class="event-details">
                 <h3>第8回「地球と遊ぼう」餅つき＆竹のスタードームづくり</h3>
@@ -142,7 +158,7 @@
                 </p>
             </div>
         </div>
-        <div id = "event12", class="event", style="margin-top: 30px;">
+        <div id="event12" class="event">
             <img src="img/event_12.png" alt="イベント写真" class="event-photo">
             <div class="event-details">
                 <h3>第6回「地球と遊ぼう」さつまいも掘り＆焼き芋🍠パーティー</h3>
@@ -176,7 +192,7 @@
                     虫取りなどをしたい子は、必要なものをお父さんお母さんと相談しよう！</p>
             </div>
         </div>
-        <div id = "event3", class="event">
+        <div id="event3" class="event">
             <img src="img/report5.JPG" alt="イベント写真" class="event-photo">
             <div class="event-details">
                 <h3>高平の里山で、芋掘り体験、焼き芋、ピザ窯パーティー</h3>
@@ -204,7 +220,7 @@
                 <!-- <a href="https://sanda-machihaku.jp/p-2024-28/" target="_blank" class="btn btn-primary">申し込みはこちら</a> -->
             </div>
         </div>
-        <div id = "event1", class="event">
+        <div id="event1" class="event">
             <img src="img/event1.png" alt="イベント写真" class="event-photo">
             <div class="event-details">
                 <h3>夏の楽しいイベント</h3>
@@ -287,15 +303,10 @@
 
     <div id="footer-placeholder"></div>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js?v=20260830"></script>
     <script>
         $(document).ready(function() {
-            $("#header-placeholder").load("header.html", function() {
-                $('#menu-button').click(function() {
-                    $('#nav-menu').slideToggle();
-                });
-            });
-
+            $("#header-placeholder").load("header.html");
             $("#footer-placeholder").load("footer.html");
         });
     </script>
