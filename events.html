@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css?v=20260830">
     <link rel="stylesheet" href="css/footer.css?v=20260830-3">
-    <link rel="stylesheet" href="css/events.css?v=20260831-2">
+    <link rel="stylesheet" href="css/events.css?v=20260902">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Google tag (gtag.js) -->
@@ -39,15 +39,29 @@
                 <span class="events-section-kicker">NOW OPEN</span>
                 <h3>現在、参加者募集中のイベント</h3>
             </div>
-            <p>現在お申し込みいただけるのは、こちらの1件です。</p>
+            <p>現在お申し込みいただけるイベントは、こちらの2件です。</p>
         </div>
 
-        <div id="event2026" class="event event--featured">
+        <div id="event-2026-09-19" class="event event--featured event--poster" data-event-card data-event-close-at="2026-09-19T10:00:00+09:00">
+            <img src="img/event-2026-09-19.jpg" alt="第3回「地球と遊ぼう」稲刈り体験イベントの告知" class="event-photo">
+            <div class="event-details">
+                <span class="event-badge" data-event-status>参加者募集中</span>
+                <h3>第3回「地球と遊ぼう」稲刈り体験イベント</h3>
+                <a href="https://forms.gle/SozvTkPfLjehZg7QA" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-event-cta data-closed-text="イベント詳細を見る" data-closed-href="https://www.instagram.com/p/Dcu4LqJJszY/">申し込みフォームへ</a>
+                <p>【開催日時】2026年9月19日（土）10:00～14:00（受付開始 9:45）<br>
+                    【会場・集合場所】NPO法人里野山家（三田市酒井349）※無料駐車場あり<br>
+                    【参加費】大人（中学生以上）2,000円／小学生500円／未就学児無料<br><br>
+                    里山の田んぼで、秋の稲刈りを体験します。お昼はみんなで薪割りをして、羽釜で炊いたご飯とお味噌汁をいただきます。食事用の容器と箸、おかずは各自でお持ちください。<br><br>
+                    汚れてもよい服装、長靴または汚れてもよい靴、水筒、タオル、着替え、帽子をご用意ください。雨天中止の場合は、前日20:00までにメールでご連絡します。</p>
+            </div>
+        </div>
+
+        <div id="event2026" class="event event--current" data-event-card data-event-close-at="2026-10-11T00:00:00+09:00">
             <img src="https://sanda-machihaku.jp/wp-content/uploads/2026/08/さんだまち博写真2026-2.jpg" alt="薪窯で焼いているあつあつのピザ" class="event-photo">
             <div class="event-details">
                 <span class="event-badge" data-event-status>参加者募集中</span>
                 <h3>あつあつピザとほりたて焼きいもパーティー！</h3>
-                <a href="https://sanda-machihaku.jp/p-2026-21/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-event-cta>公式サイトから申し込む</a>
+                <a href="https://sanda-machihaku.jp/p-2026-21/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-event-cta data-closed-text="イベント詳細を見る">公式サイトから申し込む</a>
                 <p>【開催日時】2026年10月24日（土）10:00～15:00<br>
                     【会場】里野山家（三田市酒井349）<br>
                     【参加費】大人2,500円／こども1,000円（3～12歳）<br>
@@ -497,7 +511,7 @@
 
     <div id="footer-placeholder"></div>
 
-    <script src="js/scripts.js?v=20260831"></script>
+    <script src="js/scripts.js?v=20260902"></script>
     <script>
         $(document).ready(function() {
             $("#header-placeholder").load("header.html");

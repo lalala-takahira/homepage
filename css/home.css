@@ -97,6 +97,15 @@
     object-fit: cover;
 }
 
+.featured-event__photo--poster {
+    background: #f5f0e5;
+}
+
+.featured-event__photo--poster img {
+    padding: 1rem;
+    object-fit: contain;
+}
+
 .featured-event__label {
     position: absolute;
     top: 1.25rem;

@@ -36,22 +36,29 @@ $(document).ready(function() {
     });
 
     const now = new Date();
-    const reservationsCloseAt = new Date('2026-10-11T00:00:00+09:00');
-    let statusText = '参加者募集中';
-    let ctaText = '公式サイトから申し込む';
 
-    if (now >= reservationsCloseAt) {
-        statusText = '受付は終了しました';
-        ctaText = 'イベント詳細を見る';
-    }
+    $('[data-event-card]').each(function() {
+        const card = $(this);
+        const closeAtValue = card.attr('data-event-close-at');
+        const closeAt = closeAtValue ? new Date(closeAtValue) : null;
 
-    $('[data-event-status]').text(statusText);
-    $('[data-event-cta]').each(function() {
-        const textNode = Array.from(this.childNodes).find(function(node) {
-            return node.nodeType === Node.TEXT_NODE;
-        });
-        if (textNode) {
-            textNode.nodeValue = ctaText + ' ';
+        if (!closeAt || Number.isNaN(closeAt.getTime()) || now < closeAt) {
+            return;
         }
+
+        card.find('[data-event-status]').text('受付は終了しました');
+        card.find('[data-event-cta]').each(function() {
+            const closedText = $(this).attr('data-closed-text') || 'イベント詳細を見る';
+            const closedHref = $(this).attr('data-closed-href');
+            const textNode = Array.from(this.childNodes).find(function(node) {
+                return node.nodeType === Node.TEXT_NODE;
+            });
+            if (textNode) {
+                textNode.nodeValue = closedText + ' ';
+            }
+            if (closedHref) {
+                $(this).attr('href', closedHref);
+            }
+        });
     });
 });
