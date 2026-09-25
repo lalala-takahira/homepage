@@ -14,11 +14,22 @@ $(document).ready(function() {
         }
     });
 
-    const hashTarget = window.location.hash.replace('#', '');
-    if (hashTarget && $('#' + hashTarget).hasClass('report-detail')) {
-        $('.report-summary[data-id="' + hashTarget + '"]').addClass('open');
-        $('#' + hashTarget).show();
+    function openReportFromHash() {
+        const target = document.getElementById(window.location.hash.slice(1));
+        if (!target || !target.classList.contains('report-detail')) {
+            return;
+        }
+        $('.report-summary').removeClass('open');
+        $('.report-detail').hide();
+        $('.report-summary').filter(function() {
+            return this.getAttribute('data-id') === target.id;
+        }).addClass('open');
+        $(target).show();
+        target.scrollIntoView({ block: 'start' });
     }
+
+    openReportFromHash();
+    $(window).on('hashchange', openReportFromHash);
 
     $(document).on('click', '#menu-button', function() {
         const menu = $('#nav-menu');

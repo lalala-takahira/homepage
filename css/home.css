@@ -412,3 +412,42 @@
         gap: 0.1rem;
     }
 }
+
+.upcoming-notice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: 1.4rem;
+    background: var(--cream);
+}
+
+.upcoming-notice h3 {
+    margin: 0;
+    color: var(--forest-deep);
+    font-size: 1.15rem;
+}
+
+.upcoming-notice p:not(.section-eyebrow) {
+    margin: 0.6rem 0 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.upcoming-notice .button {
+    flex-shrink: 0;
+}
+
+.home-news__instagram {
+    margin: 1.8rem 0 0;
+}
+
+@media (max-width: 768px) {
+    .upcoming-notice {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
