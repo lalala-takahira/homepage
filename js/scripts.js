@@ -1,36 +1,4 @@
 $(document).ready(function() {
-    $('.report-summary').on('click', function() {
-        const reportId = $(this).attr('data-id');
-
-        $('.report-summary.open').not(this).removeClass('open');
-        $('.report-detail:visible').not('#' + reportId).slideUp(180);
-
-        if ($(this).hasClass('open')) {
-            $(this).removeClass('open');
-            $('#' + reportId).slideUp(180);
-        } else {
-            $(this).addClass('open');
-            $('#' + reportId).slideDown(180);
-        }
-    });
-
-    function openReportFromHash() {
-        const target = document.getElementById(window.location.hash.slice(1));
-        if (!target || !target.classList.contains('report-detail')) {
-            return;
-        }
-        $('.report-summary').removeClass('open');
-        $('.report-detail').hide();
-        $('.report-summary').filter(function() {
-            return this.getAttribute('data-id') === target.id;
-        }).addClass('open');
-        $(target).show();
-        target.scrollIntoView({ block: 'start' });
-    }
-
-    openReportFromHash();
-    $(window).on('hashchange', openReportFromHash);
-
     $(document).on('click', '#menu-button', function() {
         const menu = $('#nav-menu');
         const isOpen = menu.toggleClass('active').hasClass('active');
