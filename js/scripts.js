@@ -1,4 +1,13 @@
 $(document).ready(function() {
+    $(document).on('click', '.footer-back-top', function() {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduceMotion ? 'instant' : 'smooth' });
+        const homeLink = document.querySelector('#header-placeholder a');
+        if (homeLink) {
+            homeLink.focus({ preventScroll: true });
+        }
+    });
+
     $(document).on('click', '#menu-button', function() {
         const menu = $('#nav-menu');
         const isOpen = menu.toggleClass('active').hasClass('active');
